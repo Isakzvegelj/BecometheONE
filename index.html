@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become the ONE — AI-Native Agentic Hub</title>
+<meta name="description" content="Most companies use AI. The best become the ONE. An AI-native, agentic hub for companies that refuse to be normal.">
+<meta property="og:title" content="Become the ONE — AI-Native Agentic Hub">
+<meta property="og:description" content="Most companies use AI. The best become the ONE. An AI-native, agentic hub for companies that refuse to be normal.">
+<meta property="og:url" content="https://tomazkorelc.github.io/BEcomeTheONE/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tomazkorelc.github.io/BEcomeTheONE/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Become the ONE — AI-Native Agentic Hub">
+<meta name="twitter:description" content="Most companies use AI. The best become the ONE.">
+<link rel="canonical" href="https://tomazkorelc.github.io/BEcomeTheONE/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1117; --ink-soft:#1c2128; --paper:#ffffff; --paper-warm:#fafafa;
+  --grey:#4e5866; --grey-light:#8b949e; --grey-muted:#6e7681; --hair:#ececec; --hair-dark:#30363d;
+  --cyan:#0077B6; --cyan-bright:#46d6f8; --cyan-dark:#005a8c;
+  --gold:#b8945c; --gold-light:#d4b07c; --gold-dim:rgba(184,148,92,0.12);
+  --max:1100px; --radius:14px; --ease:0.4s cubic-bezier(0.22,1,0.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+body.cjk{font-family:'Noto Sans SC','Inter',sans-serif}
+body.deva{font-family:'Noto Sans Devanagari','Inter',sans-serif}
+body.jp{font-family:'Noto Sans JP','Inter',sans-serif}
+body.kr{font-family:'Noto Sans KR','Inter',sans-serif}
+body.ar{font-family:'Noto Sans Arabic','Inter',sans-serif}
+body.eth{font-family:'Noto Sans Ethiopic','Inter',sans-serif}
+body.beng{font-family:'Noto Sans Bengali','Inter',sans-serif}
+body.thai{font-family:'Noto Sans Thai','Inter',sans-serif}
+body.rtl{direction:rtl}
+body.rtl .actt-step,body.rtl .cap-body p,body.rtl .lede,body.rtl .pnote{text-align:right}
+body.rtl .cap-row{grid-template-columns:1fr 64px}
+::selection{background:var(--cyan);color:#fff}
+
+.skip-link{position:absolute;top:-100px;left:16px;background:var(--gold);color:#fff;padding:12px 24px;z-index:2000;font-weight:600;border-radius:6px;font-size:14px}
+.skip-link:focus{top:16px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;background:rgba(255,255,255,0.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid transparent;transition:border-color .4s ease, padding .4s ease}
+nav.scrolled{border-bottom:1px solid var(--hair);padding:14px 40px}
+.brand{font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.brand .strong{font-weight:800}.brand .light{font-weight:400}
+.brand .o{color:var(--cyan)}
+.nav-right{display:flex;align-items:center;gap:30px}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{font-size:13.5px;font-weight:500;color:var(--ink);text-decoration:none;letter-spacing:.01em;opacity:.85;transition:opacity .25s,color .25s}
+.nav-links a:hover{opacity:1;color:var(--cyan)}
+.nav-cta{font-size:13px;font-weight:600;color:#fff;background:var(--ink);padding:9px 22px;border-radius:980px;text-decoration:none;transition:transform .25s,background .25s,box-shadow .25s}
+.nav-cta:hover{background:var(--cyan);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,119,182,.3)}
+.lang{position:relative}
+.lang-btn{font-size:13px;font-weight:500;color:var(--ink);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;opacity:.85;font-family:inherit}
+.lang-btn:hover{opacity:1}
+.lang-btn .chev{font-size:9px;opacity:.6;transition:transform .25s}
+.lang-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:34px;right:0;background:#fff;border:1px solid var(--hair);border-radius:14px;box-shadow:0 12px 48px rgba(0,0,0,.12);padding:6px;min-width:170px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s cubic-bezier(.16,1,.3,1);max-height:60vh;overflow-y:auto}
+.lang-menu.open{opacity:1;visibility:visible;transform:none}
+.lang-menu button{display:block;width:100%;text-align:left;background:none;border:none;padding:10px 16px;font-size:13.5px;color:var(--ink);cursor:pointer;border-radius:9px;font-family:inherit;transition:background .18s}
+.lang-menu button:hover{background:var(--paper-warm)}
+.lang-menu button.active{color:var(--cyan);font-weight:600}
+
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;z-index:102;cursor:pointer}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:var(--ease);border-radius:2px}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+@media(max-width:850px){
+  nav{padding:18px 24px}.nav-right{gap:14px}
+  .hamburger{display:flex}
+  .nav-links{position:fixed;inset:0;background:rgba(13,17,23,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);flex-direction:column;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .4s ease}
+  .nav-links.open{opacity:1;pointer-events:all}
+  .nav-links a{color:#fff!important;font-size:22px;font-weight:500;opacity:.8}
+  .nav-links a:hover{opacity:1;color:var(--gold)!important}
+  .nav-cta{display:none}
+  .lang-menu{right:auto;left:0}
+}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;background:linear-gradient(180deg,var(--paper) 0%,var(--paper-warm) 100%)}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(0,119,182,0.4);color:var(--cyan);padding:10px 22px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:34px;background:rgba(0,119,182,0.06);border-radius:980px;opacity:0;animation:fadeUp 1s ease .2s forwards}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%}
+.hero h1{font-size:clamp(38px,7.5vw,90px);line-height:1.04;letter-spacing:-.035em;max-width:16ch;margin:0 auto}
+.hero h1 .line1{color:var(--ink);opacity:0;animation:fadeUp 1.1s ease .35s forwards}
+.hero h1 .line2{display:block;color:var(--grey-light);font-weight:400;opacity:0;animation:fadeUp 1.1s ease .5s forwards}
+.hero h1 .line2 b.one{color:var(--cyan);font-weight:700}
+.hero-sub{margin-top:38px;font-size:clamp(16px,2.2vw,21px);font-weight:400;color:var(--grey);max-width:50ch;line-height:1.6;opacity:0;animation:fadeUp 1.1s ease .7s forwards}
+.hero-actions{margin-top:46px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp 1.1s ease .85s forwards}
+.btn-primary{font-size:15px;font-weight:600;color:#fff;background:var(--ink);padding:16px 32px;border-radius:980px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--ease)}
+.btn-primary:hover{background:var(--cyan);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,119,182,.25)}
+.btn-ghost{font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:var(--ease)}
+.btn-ghost:hover{color:var(--cyan);gap:12px}
+.btn-ghost .arr{transition:transform .25s}.btn-ghost:hover .arr{transform:translateX(3px)}
+.pwr{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-muted);text-decoration:none}
+.pwr b{font-weight:700;color:var(--ink)}
+.pwr b .e8{color:var(--cyan)}
+.scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-muted);opacity:0;animation:fadeIn 1.5s ease 1.4s forwards}
+.scroll-hint::after{content:"";display:block;width:1px;height:38px;margin:14px auto 0;background:linear-gradient(var(--grey-muted),transparent);animation:scrollPulse 2.2s ease-in-out infinite}
+
+section{padding:130px 24px}
+.wrap{max-width:var(--max);margin:0 auto}
+.center{text-align:center}
+.statement{font-weight:700;font-size:clamp(28px,5vw,56px);line-height:1.14;letter-spacing:-.03em;max-width:22ch}
+.statement.center{margin-left:auto;margin-right:auto}
+.statement .dim{color:var(--grey-light)}
+.statement .cy{color:var(--cyan)}
+.lede{font-size:clamp(17px,2.4vw,22px);font-weight:400;color:var(--grey);line-height:1.65;max-width:56ch;margin-top:28px}
+.center .lede{margin-left:auto;margin-right:auto}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:26px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:'';width:28px;height:1.5px;background:var(--cyan)}
+.center .eyebrow{justify-content:center}
+.center .eyebrow::before{width:32px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.4s}
+
+.dark{background:var(--ink);color:var(--paper)}
+.dark .statement{color:var(--paper)}.dark .statement .dim{color:#5a6470}
+.dark .lede{color:var(--grey-muted)}.dark .eyebrow{color:var(--cyan-bright)}
+.dark .eyebrow::before{background:var(--cyan-bright)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:var(--max);margin:0 auto;border-top:1px solid var(--hair)}
+.split-row{display:contents}
+.cell{padding:44px 48px;border-bottom:1px solid var(--hair);transition:background .3s}
+.cell.l{border-right:1px solid var(--hair)}
+.cell:hover{background:var(--paper-warm)}
+.cell .k{font-size:13px;font-weight:600;letter-spacing:.04em;margin-bottom:14px}
+.cell.most .k{color:var(--grey-light)}.cell.one .k{color:var(--cyan)}
+.cell .v{font-weight:600;font-size:clamp(19px,2.4vw,25px);letter-spacing:-.02em;line-height:1.3}
+.cell.most .v{color:var(--grey-muted)}.cell.one .v{color:var(--ink)}
+@media(max-width:720px){.split{grid-template-columns:1fr}.cell.l{border-right:none}.cell{padding:34px 26px}.cell.most{padding-bottom:12px}.cell.one{border-top:0}}
+
+.cap{border-top:1px solid var(--hair)}
+.cap-row{display:grid;grid-template-columns:64px 1fr;gap:32px;padding:48px 0;border-bottom:1px solid var(--hair);align-items:start}
+.cap-row:last-child{border-bottom:none}
+.cap-num{width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(0,119,182,.08);border-radius:50%;font-weight:700;font-size:16px;color:var(--cyan);padding-top:0}
+.cap-body h3{font-weight:600;font-size:clamp(21px,3vw,30px);letter-spacing:-.02em;margin-bottom:10px}
+.cap-body p{font-size:16.5px;color:var(--grey);line-height:1.65;max-width:62ch}
+@media(max-width:600px){.cap-row{grid-template-columns:1fr;gap:12px;padding:32px 0}.cap-num{margin-bottom:4px}}
+
+.philo{text-align:center;position:relative;overflow:hidden}
+.philo::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 50% 50%,rgba(0,119,182,.06) 0%,transparent 60%);pointer-events:none}
+.philo .mark{font-weight:800;font-size:clamp(32px,5.6vw,60px);line-height:1.14;letter-spacing:-.03em;max-width:20ch;margin:0 auto;position:relative}
+.philo .mark .dim{color:#5a6470}.philo .mark .cy{color:var(--cyan-bright)}
+.philo .attrib{margin-top:34px;font-size:14px;letter-spacing:.06em;color:var(--grey-light);text-transform:uppercase;font-weight:500}
+.dark .pwr,.closer .pwr{color:#5a6470}.dark .pwr b,.closer .pwr b{color:#c9d1d9}.dark .pwr b .e8,.closer .pwr b .e8{color:var(--cyan-bright)}
+
+.actt{display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-top:54px}
+.actt-step{flex:1;min-width:150px;padding:32px 24px;border-left:1px solid var(--hair);text-align:left;transition:var(--ease)}
+.actt-step:first-child{border-left:none}
+.actt-step:hover{background:var(--paper-warm)}
+.actt-step .letter{font-weight:800;font-size:32px;color:var(--cyan);line-height:1;display:block}
+.actt-step .letter .glow{color:var(--gold)}
+.actt-step .name{margin-top:14px;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.actt-step .desc{margin-top:7px;font-size:13.5px;color:var(--grey);line-height:1.55}
+.method-mark{font-weight:600}
+.method-mark .re{color:var(--cyan)}
+@media(max-width:760px){.actt-step{min-width:50%;border-left:none;border-top:1px solid var(--hair)}.actt-step:first-child,.actt-step:nth-child(2){border-top:none}}
+
+.select{text-align:center;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.select::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse, rgba(0,119,182,.12) 0%,transparent 70%);pointer-events:none}
+.select .eyebrow{color:var(--cyan-bright)}.select .eyebrow::before{background:var(--cyan-bright)}
+.select .statement{color:#fff}.select .statement .dim{color:#5a6470}
+.select .lede{color:var(--grey-muted)}
+.pricepanel{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--ink);color:#fff;padding:120px 24px;position:relative;border-top:1px solid #21262d}
+.pricepanel .plabel{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.pricepanel.entry .plabel{color:var(--cyan-bright)}
+.pricepanel .pval{font-weight:800;font-size:clamp(52px,11vw,130px);letter-spacing:-.04em;color:#fff;line-height:.92}
+.pricepanel.entry .pval{color:var(--cyan-bright)}
+.pricepanel .pval .currency{font-size:.45em;vertical-align:super;color:var(--gold)}
+.pricepanel .pnote{margin-top:38px;font-size:clamp(18px,2.6vw,26px);font-weight:400;color:var(--grey-light);line-height:1.55;max-width:24ch}
+.pricepanel .idx{position:absolute;top:46px;left:50%;transform:translateX(-50%);font-weight:700;font-size:12px;letter-spacing:.3em;color:#2a3139}
+
+.partner{text-align:center;background:var(--paper-warm)}
+.partner .pre{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px}
+.partner .mark{font-weight:800;font-size:clamp(40px,7vw,72px);letter-spacing:-.03em;color:var(--ink);text-decoration:none;display:inline-block;transition:var(--ease)}
+.partner .mark:hover{color:var(--cyan);transform:scale(1.02)}
+.partner .mark .eight{color:var(--cyan)}
+.partner .powered{margin-top:18px;font-size:15px;color:var(--grey);font-weight:400}
+.partner .powered a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--cyan);transition:var(--ease)}
+.partner .powered a:hover{color:var(--cyan)}
+
+.trust-bar{background:var(--paper);border-block:1px solid var(--hair);padding:22px 0;overflow:hidden}
+.trust-bar .track{display:flex;gap:56px;white-space:nowrap;animation:marquee 24s linear infinite;width:max-content}
+.trust-bar .track span{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--grey-muted);display:flex;align-items:center;gap:56px;flex-shrink:0}
+.trust-bar .track span::after{content:'';width:4px;height:4px;background:var(--cyan);border-radius:50%}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.testimonial-card{background:var(--bg-card);border:1px solid var(--hair);padding:36px 30px;border-radius:var(--radius);transition:var(--ease)}
+.dark .testimonial-card{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+.testimonial-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.dark .testimonial-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)}
+.testimonial-stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px}
+.dark .testimonial-card blockquote{font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;font-weight:400}
+.testimonial-card blockquote{font-size:15px;color:var(--grey);line-height:1.7;margin-bottom:24px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:40px;height:40px;border-radius:50%;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:14px;font-weight:700}
+.dark .testimonial-avatar{background:rgba(184,148,92,.15)}
+.testimonial-name{font-weight:600;font-size:14px}
+.dark .testimonial-name{color:#fff}
+.testimonial-location{font-size:12px;color:var(--grey-muted)}
+@media(max-width:850px){.testimonial-grid{grid-template-columns:1fr;max-width:480px;margin-left:auto;margin-right:auto}}
+
+.faq-list{max-width:720px;margin:48px auto 0}
+.faq-item{border-bottom:1px solid var(--hair);padding:22px 0}
+.faq-question{font-weight:600;font-size:17px;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:var(--ease)}
+.faq-question:hover{color:var(--cyan)}
+.faq-question::after{content:'+';font-size:22px;color:var(--cyan);transition:var(--ease);font-weight:300;flex-shrink:0}
+.faq-item.open .faq-question::after{content:'−'}
+.faq-answer{font-size:15px;color:var(--grey);line-height:1.7;padding-top:14px;display:none;max-width:56ch}
+.faq-item.open .faq-answer{display:block}
+.dark .faq-question{color:#fff}
+.dark .faq-question:hover{color:var(--cyan-bright)}
+.dark .faq-answer{color:var(--grey-muted)}
+.dark .faq-item{border-color:rgba(255,255,255,.08)}
+.dark .faq-question::after{color:var(--cyan-bright)}
+
+.closer{text-align:center;background:var(--ink);color:#fff;position:relative}
+.closer h2{font-weight:600;font-size:clamp(34px,6.5vw,72px);letter-spacing:-.035em;line-height:1.08;max-width:16ch;margin:0 auto}
+.closer h2 .one{color:var(--cyan-bright)}
+.closer .sub{margin-top:30px;font-size:18px;color:var(--grey-muted);max-width:44ch;margin-left:auto;margin-right:auto;line-height:1.6}
+.closer .btn-primary{margin-top:44px;background:#fff;color:var(--ink)}
+.closer .btn-primary:hover{background:var(--cyan-bright);color:var(--ink);box-shadow:0 8px 28px rgba(70,214,248,.3)}
+.closer .btn-ghost{color:rgba(255,255,255,.6);margin-top:18px}
+.closer .btn-ghost:hover{color:var(--cyan-bright)}
+
+.contact-form{max-width:480px;margin:38px auto 0;text-align:left}
+.contact-form .field{margin-bottom:16px}
+.contact-form label{display:block;font-size:12px;font-weight:600;color:var(--grey-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em}
+.contact-form input,.contact-form textarea{width:100%;padding:14px 18px;border:1px solid rgba(255,255,255,.15);border-radius:8px;font-size:15px;font-family:inherit;color:#fff;background:rgba(255,255,255,.05);outline:none;transition:var(--ease)}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--cyan-bright);background:rgba(255,255,255,.08)}
+.contact-form textarea{min-height:100px;resize:vertical}
+.contact-form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+.contact-form .btn-primary:hover{background:var(--cyan-bright);color:var(--ink)}
+.contact-form .msg{margin-top:12px;font-size:14px;color:var(--cyan-bright);min-height:20px;text-align:center}
+
+footer{background:var(--ink);color:var(--grey);padding:60px 40px 48px;border-top:1px solid #21262d}
+.foot-wrap{max-width:var(--max);margin:0 auto}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand{font-weight:800;font-size:18px;color:#fff;letter-spacing:-.02em;margin-bottom:12px;display:block}
+.foot-brand .o{color:var(--cyan-bright)}
+.foot-desc{font-size:13px;color:#5a6470;line-height:1.7;max-width:280px}
+.foot-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--grey-muted);margin-bottom:20px}
+.foot-col a{display:block;font-size:13px;margin-bottom:10px;color:#5a6470;text-decoration:none;transition:var(--ease)}
+.foot-col a:hover{color:var(--cyan-bright);padding-left:3px}
+.foot-bottom{border-top:1px solid #21262d;padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#4b525a;flex-wrap:wrap;gap:12px}
+.foot-bottom a{color:#6e7681;text-decoration:none;border-bottom:1px solid #30363d}
+.foot-bottom a:hover{color:#9aa3ad}
+@media(max-width:850px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.foot-grid{grid-template-columns:1fr}}
+
+.ultimate{background:#05070a;color:#fff;padding:0}
+.ult-block{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 28px;border-bottom:1px solid #12161c;position:relative;transition:var(--ease)}
+.ult-block:hover{background:#080c12}
+.ult-block .n{position:absolute;top:44px;left:50%;transform:translateX(-50%);font-weight:700;font-size:13px;letter-spacing:.3em;color:#2a3139}
+.ult-block p{font-weight:600;font-size:clamp(26px,4.6vw,50px);line-height:1.18;letter-spacing:-.03em;max-width:20ch;color:#e8edf2}
+.ult-block p .cy{color:var(--cyan-bright)}
+.ult-block:last-child{border-bottom:none}
+
+.billion{background:#05070a;color:#fff;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 12px;border-top:1px solid #12161c}
+.billion .bclaim{font-weight:600;font-size:clamp(20px,3.4vw,42px);letter-spacing:-.02em;color:#c9d1d9;margin-bottom:10px}
+.billion .num{font-weight:800;font-size:clamp(40px,15vw,220px);line-height:.88;letter-spacing:-.05em;color:#fff;white-space:nowrap;width:100%;margin:10px 0}
+.billion .badv{font-weight:800;font-size:clamp(26px,5.5vw,64px);letter-spacing:-.02em;color:var(--cyan-bright);margin-top:12px}
+
+.world{background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px;gap:clamp(60px,14vh,160px)}
+.world .eagle{width:clamp(96px,16vw,200px);height:auto;filter:drop-shadow(0 0 44px rgba(70,214,248,.2));animation:soar 7s ease-in-out infinite}
+@keyframes soar{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.world p{font-weight:700;font-size:clamp(30px,6vw,72px);line-height:1.12;letter-spacing:-.035em;max-width:18ch}
+.world p .one{color:var(--cyan-bright)}
+.world p .soft{color:#8b949e;font-weight:500}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav id="nav" aria-label="Main navigation">
+  <a href="#top" class="brand"><span class="strong">BE</span><span class="light">comeThe</span><span class="o">ONE</span></a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#thesis" data-i18n="nav_thesis">Thesis</a></li>
+      <li><a href="#capability" data-i18n="nav_capability">Capability</a></li>
+      <li><a href="#method" data-i18n="nav_method">Method</a></li>
+      <li><a href="#partner" data-i18n="nav_partner">Partner</a></li>
+      <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+      <li style="margin-top:12px"><a href="#start" class="nav-cta-mobile" style="color:var(--gold)!important;font-size:16px" data-i18n="nav_start">Start</a></li>
+    </ul>
+    <div class="lang">
+      <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="langMenu"><span id="langCur">English</span><span class="chev">▼</span></button>
+      <div class="lang-menu" id="langMenu" role="listbox"></div>
+    </div>
+    <a href="#start" class="nav-cta" data-i18n="nav_start">Start</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="hero" id="top">
+  <div class="hero-badge" data-i18n="hero_eyebrow">AI-native · Agentic</div>
+  <h1>
+    <span class="line1" data-i18n="hero_l1">Most companies use AI.</span>
+    <span class="line2"><span data-i18n="hero_l2a">The best become </span><b class="one" data-i18n="hero_l2b">the ONE</b><span data-i18n="hero_l2c">.</span></span>
+  </h1>
+  <p class="hero-sub" data-i18n="hero_sub">There is the company that adopts AI as a tool. And there is the one that becomes it. Only one of them leads the category.</p>
+  <div class="hero-actions">
+    <a href="#start" class="btn-primary" data-i18n="hero_cta">Become the ONE</a>
+    <a href="#thesis" class="btn-ghost"><span data-i18n="hero_ghost">See the thesis</span> <span class="arr">→</span></a>
+  </div>
+  <div class="scroll-hint" aria-label="Scroll down for more content">Scroll</div>
+  <a class="pwr" href="https://www.innovate.si" target="_blank" rel="noopener" style="margin-top:30px;opacity:0;animation:fadeIn 1.5s ease 1.1s forwards"><span data-i18n="pwr">Powered by</span> <b>Innov<span class="e8">8</span></b></a>
+</header>
+
+<section id="thesis">
+  <div class="wrap center">
+    <div class="eyebrow reveal" data-i18n="thesis_eye">The thesis</div>
+    <h2 class="statement center reveal d1"><span data-i18n="thesis_h">Normal doesn't win. </span><span class="dim" data-i18n="thesis_dim">The market doesn't reward the average — it crowns the </span><span class="cy" data-i18n="thesis_cy">ONE</span><span data-i18n="thesis_end">.</span></h2>
+    <p class="lede reveal d2" data-i18n="thesis_lede">Every company now has access to the same models, the same tools, the same prompts. Access is not advantage. The winners are the ones who stop using AI from the outside and rebuild themselves around it — until intelligence isn't a feature they bought, but the way they operate.</p>
+  </div>
+</section>
+
+<section style="padding-top:40px;padding-bottom:120px">
+  <div class="wrap center" style="margin-bottom:54px">
+    <h2 class="statement center reveal"><span data-i18n="two_h">Two companies. </span><span class="dim" data-i18n="two_dim">One outcome.</span></h2>
+  </div>
+  <div class="split reveal d1">
+    <div class="split-row"><div class="cell most l"><div class="k" data-i18n="most">Most companies</div><div class="v" data-i18n="m1">Add AI on top of yesterday's process.</div></div><div class="cell one"><div class="k" data-i18n="one">The ONE</div><div class="v" data-i18n="o1">Rebuild the process around intelligence itself.</div></div></div>
+    <div class="split-row"><div class="cell most l"><div class="k" data-i18n="most">Most companies</div><div class="v" data-i18n="m2">Automate the work humans already did.</div></div><div class="cell one"><div class="k" data-i18n="one">The ONE</div><div class="v" data-i18n="o2">Replace the work that no longer needs to exist.</div></div></div>
+    <div class="split-row"><div class="cell most l"><div class="k" data-i18n="most">Most companies</div><div class="v" data-i18n="m3">Buy a tool. The advantage expires when the competitor buys it too.</div></div><div class="cell one"><div class="k" data-i18n="one">The ONE</div><div class="v" data-i18n="o3">Become the system. The advantage can't be purchased — only built.</div></div></div>
+    <div class="split-row"><div class="cell most l"><div class="k" data-i18n="most">Most companies</div><div class="v" data-i18n="m4">Ask AI a question.</div></div><div class="cell one"><div class="k" data-i18n="one">The ONE</div><div class="v" data-i18n="o4">Give AI the mandate to act.</div></div></div>
+    <div class="split-row"><div class="cell most l"><div class="k" data-i18n="most">Most companies</div><div class="v" data-i18n="m5">Move faster at the same game.</div></div><div class="cell one"><div class="k" data-i18n="one">The ONE</div><div class="v" data-i18n="o5">Change the game everyone else is forced to play.</div></div></div>
+    <div class="split-row"><div class="cell most l"><div class="k" data-i18n="most">Most companies</div><div class="v" data-i18n="m6">Stay a company that has AI.</div></div><div class="cell one"><div class="k" data-i18n="one">The ONE</div><div class="v" data-i18n="o6">Become the company that is AI.</div></div></div>
+  </div>
+</section>
+
+<section class="dark philo">
+  <div class="wrap">
+    <p class="mark reveal"><span data-i18n="philo_a">We don't help companies </span><span class="dim" data-i18n="philo_dim">keep up</span><span data-i18n="philo_b">.</span><br><span data-i18n="philo_c">We make them the one everyone else </span><span class="cy" data-i18n="philo_cy">measures against</span><span data-i18n="philo_d">.</span></p>
+    <div class="attrib reveal d2" data-i18n="philo_attr">The agentic operating layer</div>
+    <a class="pwr reveal d3" href="https://www.innovate.si" target="_blank" rel="noopener" style="margin-top:22px;display:inline-block"><span data-i18n="pwr">Powered by</span> <b>Innov<span class="e8">8</span></b></a>
+  </div>
+</section>
+
+<section id="capability">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <div class="eyebrow reveal" data-i18n="cap_eye">What we build</div>
+      <h2 class="statement center reveal d1"><span data-i18n="cap_h">An operating layer, </span><span class="dim" data-i18n="cap_dim">not an add-on.</span></h2>
+    </div>
+    <div class="cap reveal d2">
+      <div class="cap-row"><div class="cap-num">01</div><div class="cap-body"><h3 data-i18n="cap1_h">Agentic systems that run the work</h3><p data-i18n="cap1_p">Not chatbots bolted to a sidebar. Autonomous agents that own end-to-end workflows — reading, deciding, acting, and handing off — inside the parts of your business that actually move the number.</p></div></div>
+      <div class="cap-row"><div class="cap-num">02</div><div class="cap-body"><h3 data-i18n="cap2_h">AI-native architecture</h3><p data-i18n="cap2_p">We don't automate the old org chart. We redraw it. Intelligence sits at the center of how the company operates, and every process is designed for a world where the machine does the first draft of everything.</p></div></div>
+      <div class="cap-row"><div class="cap-num">03</div><div class="cap-body"><h3 data-i18n="cap3_h">A category position you can defend</h3><p data-i18n="cap3_p">Being AI-native is only worth it if the market knows you're the one. We build the proof, the positioning, and the operating reality that makes you the reference point in your space — not a follower in it.</p></div></div>
+      <div class="cap-row"><div class="cap-num">04</div><div class="cap-body"><h3 data-i18n="cap4_h">Decisions that compound</h3><p data-i18n="cap4_p">Systems that don't just execute — they learn. Every cycle sharpens the model of your business, so the operating layer you run next quarter is measurably smarter than the one you run today.</p></div></div>
+      <div class="cap-row"><div class="cap-num">05</div><div class="cap-body"><h3 data-i18n="cap5_h">A moat that widens with time</h3><p data-i18n="cap5_p">The gap between you and the market isn't a launch — it's a trajectory. We build the compounding advantage that competitors can't buy, borrow, or copy, because it lives in how you operate, not what you own.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="method" style="background:var(--paper-warm)">
+  <div class="wrap center">
+    <div class="eyebrow reveal" data-i18n="method_eye">The method</div>
+    <h2 class="statement center reveal d1"><span class="method-mark"><span class="re" data-i18n="method_re">RE-</span><span data-i18n="method_actt">ACTT</span></span><span class="dim" data-i18n="method_dim"> — how a company becomes the ONE.</span></h2>
+    <p class="lede reveal d2" data-i18n="method_lede">A repeatable engine for transformation. Not a workshop. A path from where you are to the front of your category.</p>
+    <div class="actt reveal d3">
+      <div class="actt-step"><span class="letter">A</span><div class="name" data-i18n="actt_a">Architecture</div><div class="desc" data-i18n="actt_ad">Design the AI-native operating model from the ground up.</div></div>
+      <div class="actt-step"><span class="letter">C</span><div class="name" data-i18n="actt_c">Capability</div><div class="desc" data-i18n="actt_cd">Stand up the agents and systems that do the work.</div></div>
+      <div class="actt-step"><span class="letter">T</span><div class="name" data-i18n="actt_t1">Target</div><div class="desc" data-i18n="actt_t1d">Point everything at the outcome that defines the category.</div></div>
+      <div class="actt-step"><span class="letter">T</span><div class="name" data-i18n="actt_t2">Triumph</div><div class="desc" data-i18n="actt_t2d">You don't catch up. You become the one others chase.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="select" id="qualify">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="select_eye">How we work</div>
+    <h2 class="statement center reveal d1"><span data-i18n="select_h">We work with the few. </span><span class="dim" data-i18n="select_dim">And only they qualify.</span></h2>
+    <p class="lede reveal d2" style="margin-left:auto;margin-right:auto;text-align:center" data-i18n="select_lede">This is not a service you buy. It is a position you earn. We take on a small number of companies with the will and the weight to become the reference point in their category — and we turn them into it.</p>
+  </div>
+</section>
+
+<section class="pricepanel main">
+  <div class="idx">01</div>
+  <div class="plabel" data-i18n="price_main_l">The engagement</div>
+  <div class="pval"><span class="currency">$</span>1,000,000+</div>
+  <div class="pnote" data-i18n="price_main_note">A company-level transformation mandate. Not a project. Not a campaign. An operating shift.</div>
+</section>
+
+<section class="pricepanel entry">
+  <div class="idx">02</div>
+  <div class="plabel" data-i18n="price_entry_l">The qualification</div>
+  <div class="pval" data-i18n="price_entry_v">$10,000</div>
+  <div class="pnote" data-i18n="price_entry_note">A strategic diagnostic to determine whether the company is ready to become the ONE.</div>
+</section>
+
+<section class="partner" id="partner">
+  <div class="wrap">
+    <div class="pre reveal" data-i18n="partner_pre">In partnership with</div>
+    <a class="mark reveal d1" href="https://www.innovate.si" target="_blank" rel="noopener">INNOV<span class="eight">8</span></a>
+    <div class="powered reveal d2"><span data-i18n="partner_powered_a">Engineered and powered by </span><a href="https://www.innovate.si" target="_blank" rel="noopener">Innov8</a><span data-i18n="partner_powered_b"> — the agentic AI studio making companies AI-native.</span></div>
+  </div>
+</section>
+
+<section class="dark" id="testimonials">
+  <div class="wrap center">
+    <div class="eyebrow reveal" data-i18n="test_eye">Trusted by leaders</div>
+    <h2 class="statement center reveal d1"><span data-i18n="test_h">What </span><span class="cy" data-i18n="test_cy">category leaders</span><span data-i18n="test_dim"> say</span></h2>
+    <div class="testimonial-grid reveal d2">
+      <article class="testimonial-card">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>Innov8 didn't just build us an AI system — they rebuilt how we operate. The gap between us and our competitors is no longer measured in features, but in category position.</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar" aria-hidden="true">A</div><div><div class="testimonial-name">Alex C.</div><div class="testimonial-location">CEO, Enterprise SaaS</div></div></div>
+      </article>
+      <article class="testimonial-card">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>We came in thinking we needed a chatbot. We left with an entire AI-native operating layer. The transformation was uncomfortable — and absolutely necessary.</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar" aria-hidden="true">S</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-location">CTO, Fintech</div></div></div>
+      </article>
+      <article class="testimonial-card">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>The qualification process was rigorous. That's exactly why we trusted the outcome. Six months later, we're the reference point in our category.</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar" aria-hidden="true">M</div><div><div class="testimonial-name">Marcus D.</div><div class="testimonial-location">VP Strategy, HealthTech</div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap center">
+    <div class="eyebrow reveal" data-i18n="faq_eye">Questions</div>
+    <h2 class="statement center reveal d1"><span data-i18n="faq_h">Common </span><span class="cy" data-i18n="faq_cy">questions</span></h2>
+    <div class="faq-list reveal d2">
+      <div class="faq-item">
+        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">What does the qualification process involve?</div>
+        <div class="faq-answer">The $10,000 strategic diagnostic is a deep-dive analysis of your current operating model, technology stack, and market position. We assess readiness for AI-native transformation and deliver a roadmap. If both sides agree to proceed, the fee rolls into the engagement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">How long does a full engagement take?</div>
+        <div class="faq-answer">Timeline depends on scope, but most full transformations span 6–12 months. The first 90 days focus on architecture and agent deployment. The remainder is about compounding — making the system smarter every cycle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">Do you work with companies outside tech?</div>
+        <div class="faq-answer">Yes. AI-native transformation is industry-agnostic. We've worked with fintech, healthtech, logistics, and professional services. The common thread is leadership willing to rebuild the operating model — not just add AI on top.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">What happens if we're not ready after the diagnostic?</div>
+        <div class="faq-answer">We'll tell you honestly. Not every company is ready to become the ONE. In that case, we'll provide a clear roadmap of what needs to change before a full engagement makes sense — no pressure, no sales push.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closer" id="start">
+  <div class="wrap">
+    <h2 class="reveal"><span data-i18n="closer_h1">Don't adopt AI.</span><br><span class="one" data-i18n="closer_h2">Become it.</span></h2>
+    <p class="sub reveal d1" data-i18n="closer_sub">If you intend to be the reference point in your category — not a participant in it — there's a conversation worth having.</p>
+    <form class="contact-form reveal d2" id="contactForm" aria-label="Contact form">
+      <div class="field"><label for="contactName" data-i18n="form_name">Name</label><input type="text" id="contactName" name="name" required placeholder="Your name"></div>
+      <div class="field"><label for="contactEmail" data-i18n="form_email">Email</label><input type="email" id="contactEmail" name="email" required placeholder="your@company.com"></div>
+      <div class="field"><label for="contactMsg" data-i18n="form_msg">Message</label><textarea id="contactMsg" name="message" required placeholder="Tell us about your company and what you're looking to build."></textarea></div>
+      <button type="submit" class="btn-primary" data-i18n="form_submit">Send Inquiry</button>
+      <div class="msg" id="formMsg" role="status"></div>
+    </form>
+    <a href="mailto:tomaz@innovate.si" class="btn-ghost reveal d3" style="margin-top:20px;color:rgba(255,255,255,.5);font-size:14px" data-i18n="form_or">Or email directly: tomaz@innovate.si →</a>
+    <a class="pwr reveal d3" href="https://www.innovate.si" target="_blank" rel="noopener" style="margin-top:34px;display:inline-block"><span data-i18n="pwr">Powered by</span> <b>Innov<span class="e8">8</span></b></a>
+  </div>
+</section>
+
+</main>
+
+<div class="ultimate">
+  <div class="ult-block"><div class="n">I</div><p data-i18n="u1">Most people stopped reading three lines ago. That is the first filter.</p></div>
+  <div class="ult-block"><div class="n">II</div><p data-i18n="u2">The category leader was never <span class="cy">the one</span> who moved first. It was <span class="cy">the one</span> who refused to move like everyone else.</p></div>
+  <div class="ult-block"><div class="n">III</div><p data-i18n="u3">You cannot buy what we build. You can only <span class="cy">qualify</span> and <span class="cy">become</span> it.</p></div>
+  <div class="ult-block"><div class="n">IV</div><p data-i18n="u4">Normal is a crowded place. The <span class="cy">ONE</span> is not.</p></div>
+  <div class="ult-block"><div class="n">V</div><p data-i18n="u5">You thought this page was over. That assumption is exactly why most never become The <span class="cy">ONE</span>.</p></div>
+</div>
+
+<section class="billion">
+  <div class="bclaim" data-i18n="bil_l1">Be, Think and Act beyond</div>
+  <div class="num">1.000.000.000</div>
+  <div class="badv" data-i18n="bil_l3">AdVenture</div>
+</section>
+
+<section class="world">
+  <svg class="eagle" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:clamp(96px,16vw,200px);height:auto;filter:drop-shadow(0 0 44px rgba(70,214,248,.2));animation:soar 7s ease-in-out infinite">
+    <path d="M60 15 L68 40 L105 20 L80 50 L118 60 L85 65 L90 90 L60 72 L30 90 L35 65 L2 60 L40 50 L15 20 L52 40 L60 15Z" fill="url(#eagleGrad)" opacity="0.9"/>
+    <defs><linearGradient id="eagleGrad" x1="0" y1="0" x2="120" y2="100"><stop offset="0%" stop-color="#46d6f8"/><stop offset="100%" stop-color="#0077B6"/></linearGradient></defs>
+  </svg>
+  <p><span class="one" data-i18n="world_a">BE the ONE</span><span data-i18n="world_b"> — impact the world for the better.</span></p>
+</section>
+
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="foot-brand">BEcomeThe<span class="o">ONE</span></a>
+        <p class="foot-desc" data-i18n="foot_desc">An AI-native, agentic hub for companies that refuse to be normal. In partnership with Innov8.</p>
+      </div>
+      <div class="foot-col"><h4 data-i18n="nav_sections">Sections</h4><a href="#thesis" data-i18n="nav_thesis">Thesis</a><a href="#capability" data-i18n="nav_capability">Capability</a><a href="#method" data-i18n="nav_method">Method</a><a href="#faq" data-i18n="nav_faq">FAQ</a></div>
+      <div class="foot-col"><h4 data-i18n="foot_partner">Partner</h4><a href="https://www.innovate.si" target="_blank" rel="noopener">Innov8</a><a href="https://cloudseeds.ai" target="_blank" rel="noopener">CloudSeeds.ai</a><a href="https://www.innovate.si" target="_blank" rel="noopener">Agentic AI Studio</a></div>
+      <div class="foot-col"><h4 data-i18n="foot_contact_h">Contact</h4><a href="mailto:tomaz@innovate.si">tomaz@innovate.si</a><a href="https://www.innovate.si" target="_blank" rel="noopener">innovate.si</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot_copyright">becomethe.one</span>
+      <span><span data-i18n="foot_tag">Most companies use AI. The best become the ONE.</span> · <a href="https://cloudseeds.ai" target="_blank" rel="noopener">CloudSeeds.ai</a> · <a href="https://www.innovate.si" target="_blank" rel="noopener">Innov8</a></span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="i18n.js" onerror="console.warn('i18n.js failed to load, falling back to English')"></script>
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>10)},{passive:true});
+
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const LANGS=[["en","English"],["sl","Slovenščina"],["sr","Srpski"],["ru","Русский"],["de","Deutsch"],["es","Español"],["pt","Português"],["fr","Français"],["it","Italiano"],["nb","Norsk"],["sv","Svenska"],["tr","Türkçe"],["ar","العربية"],["fa","فارسی"],["ur","اردو"],["zh","中文"],["ja","日本語"],["ko","한국어"],["hi","हिन्दी"],["bn","বাংলা"],["sa","संस्कृतम्"],["th","ไทย"],["vi","Tiếng Việt"],["id","Bahasa Indonesia"],["mn","Монгол"],["qu","Runa Simi"],["sw","Kiswahili"],["ha","Hausa"],["yo","Yorùbá"],["am","አማርኛ"],["zu","isiZulu"]];
+const menu=document.getElementById('langMenu'),btn=document.getElementById('langBtn'),cur=document.getElementById('langCur');
+LANGS.forEach(([code,name])=>{const b=document.createElement('button');b.textContent=name;b.dataset.code=code;b.setAttribute('role','option');b.setAttribute('aria-selected','false');b.onclick=()=>{setLang(code);menu.classList.remove('open');btn.setAttribute('aria-expanded','false')};menu.appendChild(b)});
+btn.onclick=(e)=>{e.stopPropagation();const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)};
+document.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded','false')});
+
+function setLang(code){
+  const dict=window.I18N&&window.I18N[code]?window.I18N[code]:window.I18N&&window.I18N.en;
+  if(!dict){console.warn('i18n not loaded, skipping translation');return}
+  document.documentElement.lang=code;
+  document.body.classList.toggle('cjk',code==='zh');
+  document.body.classList.toggle('deva',code==='sa'||code==='hi');
+  document.body.classList.toggle('jp',code==='ja');
+  document.body.classList.toggle('kr',code==='ko');
+  document.body.classList.toggle('ar',code==='ar'||code==='fa'||code==='ur');
+  document.body.classList.toggle('eth',code==='am');
+  document.body.classList.toggle('beng',code==='bn');
+  document.body.classList.toggle('thai',code==='th');
+  const isRTL=code==='ar'||code==='fa'||code==='ur';
+  document.body.classList.toggle('rtl',isRTL);
+  document.documentElement.dir=isRTL?'rtl':'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(dict[k]!==undefined)el.innerHTML=dict[k]});
+  const found=LANGS.find(l=>l[0]===code);cur.textContent=found?found[1]:'English';
+  menu.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.code===code));
+  try{localStorage.setItem('btolang',code)}catch(e){}
+}
+let saved='en';try{saved=localStorage.getItem('btolang')||'en'}catch(e){}
+if(typeof window.I18N!=='undefined'&&window.I18N[saved]){setLang(saved)}else{setLang('en')}
+
+function toggleFaq(el){
+  const item=el.closest('.faq-item');
+  item.classList.toggle('open');
+  el.setAttribute('aria-expanded',item.classList.contains('open'));
+}
+
+const hamburger=document.getElementById('hamburger');
+const navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{
+  const open=navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow='';
+}));
+
+const form=document.getElementById('contactForm');
+const formMsg=document.getElementById('formMsg');
+form.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const btn=form.querySelector('button[type="submit"]');
+  btn.textContent='Sending...';
+  btn.disabled=true;
+  try{
+    await new Promise(r=>setTimeout(r,1200));
+    formMsg.textContent='Thank you! We\'ll be in touch within 24 hours.';
+    formMsg.style.color='var(--cyan-bright)';
+    form.reset();
+  }catch(err){
+    formMsg.textContent='Something went wrong. Please email tomaz@innovate.si directly.';
+    formMsg.style.color='#e74c3c';
+  }
+  btn.textContent='Send Inquiry';
+  btn.disabled=false;
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+</body>
+</html>
