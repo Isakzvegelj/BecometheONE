@@ -14,6 +14,17 @@
 <meta name="twitter:title" content="Become the ONE — AI-Native Agentic Hub">
 <meta name="twitter:description" content="Most companies use AI. The best become the ONE.">
 <link rel="canonical" href="https://tomazkorelc.github.io/BEcomeTheONE/">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"BEcomeTheONE",
+  "url":"https://tomazkorelc.github.io/BEcomeTheONE/",
+  "description":"Most companies use AI. The best become the ONE. An AI-native, agentic hub for companies that refuse to be normal.",
+  "foundingDate":"2024",
+  "affiliation":{"@type":"Organization","name":"Innov8","url":"https://www.innovate.si"}
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +68,7 @@ nav.scrolled{border-bottom:1px solid var(--hair);padding:14px 40px}
 .nav-links{display:flex;align-items:center;gap:30px;list-style:none}
 .nav-links a{font-size:13.5px;font-weight:500;color:var(--ink);text-decoration:none;letter-spacing:.01em;opacity:.85;transition:opacity .25s,color .25s}
 .nav-links a:hover{opacity:1;color:var(--cyan)}
-.nav-cta{font-size:13px;font-weight:600;color:#fff;background:var(--ink);padding:9px 22px;border-radius:980px;text-decoration:none;transition:transform .25s,background .25s,box-shadow .25s}
+.nav-cta{font-size:13px;font-weight:600;color:#fff;background:var(--ink);padding:9px 22px;border-radius:980px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:transform .25s,background .25s,box-shadow .25s}
 .nav-cta:hover{background:var(--cyan);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,119,182,.3)}
 .lang{position:relative}
 .lang-btn{font-size:13px;font-weight:500;color:var(--ink);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;opacity:.85;font-family:inherit}
@@ -181,7 +192,6 @@ section{padding:130px 24px}
 .pricepanel.entry .plabel{color:var(--cyan-bright)}
 .pricepanel .pval{font-weight:800;font-size:clamp(52px,11vw,130px);letter-spacing:-.04em;color:#fff;line-height:.92}
 .pricepanel.entry .pval{color:var(--cyan-bright)}
-.pricepanel .pval .currency{font-size:.45em;vertical-align:super;color:var(--gold)}
 .pricepanel .pnote{margin-top:38px;font-size:clamp(18px,2.6vw,26px);font-weight:400;color:var(--grey-light);line-height:1.55;max-width:24ch}
 .pricepanel .idx{position:absolute;top:46px;left:50%;transform:translateX(-50%);font-weight:700;font-size:12px;letter-spacing:.3em;color:#2a3139}
 
@@ -402,14 +412,14 @@ footer{background:var(--ink);color:var(--grey);padding:60px 40px 48px;border-top
 <section class="pricepanel main">
   <div class="idx">01</div>
   <div class="plabel" data-i18n="price_main_l">The engagement</div>
-  <div class="pval"><span class="currency">$</span>1,000,000+</div>
+  <div class="pval" data-i18n="price_main_v">€1,000,000+</div>
   <div class="pnote" data-i18n="price_main_note">A company-level transformation mandate. Not a project. Not a campaign. An operating shift.</div>
 </section>
 
 <section class="pricepanel entry">
   <div class="idx">02</div>
   <div class="plabel" data-i18n="price_entry_l">The qualification</div>
-  <div class="pval" data-i18n="price_entry_v">$10,000</div>
+  <div class="pval" data-i18n="price_entry_v">€10,000</div>
   <div class="pnote" data-i18n="price_entry_note">A strategic diagnostic to determine whether the company is ready to become the ONE.</div>
 </section>
 
