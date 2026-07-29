@@ -300,7 +300,7 @@ footer{background:var(--ink);color:var(--grey);padding:60px 40px 48px;border-top
 .billion .badv{font-weight:800;font-size:clamp(26px,5.5vw,64px);letter-spacing:-.02em;color:var(--cyan-bright);margin-top:12px}
 
 .world{background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px;gap:clamp(60px,14vh,160px)}
-.world .eagle{width:clamp(96px,16vw,200px);height:auto;filter:drop-shadow(0 0 44px rgba(70,214,248,.2));animation:soar 7s ease-in-out infinite}
+.world .eagle{width:clamp(96px,16vw,200px);height:auto;aspect-ratio:408/168;filter:drop-shadow(0 0 44px rgba(70,214,248,.2));animation:soar 7s ease-in-out infinite;display:block}
 @keyframes soar{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 .world p{font-weight:700;font-size:clamp(30px,6vw,72px);line-height:1.12;letter-spacing:-.035em;max-width:18ch}
 .world p .one{color:var(--cyan-bright)}
@@ -531,7 +531,7 @@ footer{background:var(--ink);color:var(--grey);padding:60px 40px 48px;border-top
 </section>
 
 <section class="world">
-  <img class="eagle" alt="" src="eagle.png" width="408" height="168" loading="lazy" decoding="async" data-i18n-alt="world_eagle_alt">
+  <img class="eagle" alt="" src="eagle.png" loading="lazy" decoding="async" data-i18n-alt="world_eagle_alt">
   <p><span class="one" data-i18n="world_a">BE the ONE</span><span data-i18n="world_b"> — impact the world for the better.</span></p>
 </section>
 
