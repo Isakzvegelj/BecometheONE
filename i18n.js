@@ -52,6 +52,7 @@ en:{
  foot_desc:'An AI-native, agentic hub for companies that refuse to be normal. In partnership with Innov8.',
  foot_sections:'Sections',foot_partner:'Partner',foot_contact_h:'Contact',foot_copyright:'becomethe.one',
  foot_tag:'Most companies use AI. The best become the ONE.',
+ price_cta:'Apply for qualification',
 },
 
 sl:{
